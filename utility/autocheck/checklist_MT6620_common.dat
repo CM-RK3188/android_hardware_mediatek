@@ -1,0 +1,104 @@
+#Notice:
+#1:The sequence of block "ENVIROMENT_SET" should be first, can not be moved
+#2:autocheck.sh parser this DAT file by braceleft and braceright
+#  braceleft, braceright should be paired, and a separate line for each symbol 
+#3:The statement out of brace pair, will not be processed 
+#4:The statement includes a '#' at the begining of it, will not be processed too.  
+
+ENVIROMENT_SET:
+{
+  BASE_PATH=../../../../
+  RPODUCT_OUT_PATH=out/target/product/m805_893x/system
+  XBIN_PATH=xbin
+  BTN_PATH=bin
+  LIB_PATH=lib
+  APP_PATH=app
+  SUPP_CONF_PATH=etc/wifi
+  WIFI_FW_PATH=etc/firmware
+  KO_PATH=lib/modules
+}
+
+
+MODULE_WLAN:
+{
+  ${RPODUCT_OUT_PATH}/etc/wifi/wpa_supplicant.conf
+  ${RPODUCT_OUT_PATH}/etc/wifi/p2p_supplicant.conf
+  ${RPODUCT_OUT_PATH}/etc/permissions/android.hardware.wifi.direct.xml
+  ${RPODUCT_OUT_PATH}/bin/wpa_supplicant
+  ${RPODUCT_OUT_PATH}/bin/wpa_cli 
+  ${RPODUCT_OUT_PATH}/bin/hald
+  ${RPODUCT_OUT_PATH}/bin/wlan_loader
+  ${RPODUCT_OUT_PATH}/lib/libhardware_legacy.so
+  ${RPODUCT_OUT_PATH}/etc/firmware/WIFI_RAM_CODE
+  ${RPODUCT_OUT_PATH}/etc/firmware/WIFI_RAM_CODE_E6
+  ${RPODUCT_OUT_PATH}/../data/nvram/APCFG/APRDEB/WIFI
+}
+
+MODULE_BT:
+{
+}
+
+MODULE_FM:
+{
+}
+
+MODULE_GPS:
+{
+  ${RPODUCT_OUT_PATH}/lib/hw/gps.default.so
+  ${RPODUCT_OUT_PATH}/xbin/mnld
+  ${RPODUCT_OUT_PATH}/xbin/libmnlp_mt6620
+}
+
+MODULE_UTILITY:
+{
+  ${RPODUCT_OUT_PATH}/app/Combo_Tool.apk
+  ${RPODUCT_OUT_PATH}/lib/libhwtest_wifi_jni.so
+  ${RPODUCT_OUT_PATH}/lib/libhwtest_bt_jni.so
+  ${RPODUCT_OUT_PATH}/lib/libhwtest_fm_jni.so
+  ${RPODUCT_OUT_PATH}/lib/libbluetooth_em.so
+  ${RPODUCT_OUT_PATH}/lib/libbluetooth_mtk_pure.so
+  ${RPODUCT_OUT_PATH}/lib/libfmr.so
+  ${RPODUCT_OUT_PATH}/lib/libautogps.so
+  ${RPODUCT_OUT_PATH}/lib/libwifitest.so
+  ${RPODUCT_OUT_PATH}/xbin/iwpriv
+  ${RPODUCT_OUT_PATH}/xbin/mysu
+  ${RPODUCT_OUT_PATH}/bin/autobt
+  ${RPODUCT_OUT_PATH}/bin/wifitest
+  ${RPODUCT_OUT_PATH}/bin/wcntest
+  ${RPODUCT_OUT_PATH}/bin/wcntestd
+  ${RPODUCT_OUT_PATH}/bin/autofm
+}
+
+MODULE_WMT:
+{
+  ${RPODUCT_OUT_PATH}/bin/wmt_launcher
+  ${RPODUCT_OUT_PATH}/bin/wmt_lpbk
+  ${RPODUCT_OUT_PATH}/bin/wmt_concurrency
+  ${RPODUCT_OUT_PATH}/etc/firmware/mt6620_patch_e3_0_hdr.bin
+  ${RPODUCT_OUT_PATH}/etc/firmware/mt6620_patch_e3_1_hdr.bin
+  ${RPODUCT_OUT_PATH}/etc/firmware/mt6620_patch_e3_2_hdr.bin
+  ${RPODUCT_OUT_PATH}/etc/firmware/mt6620_patch_e3_3_hdr.bin
+  ${RPODUCT_OUT_PATH}/etc/firmware/WMT.cfg
+}
+
+MODULE_CONFIG:
+{
+  ${RPODUCT_OUT_PATH}/../root/init.connectivity.rc
+}
+
+MODULE_KERNEL:
+{
+  ${RPODUCT_OUT_PATH}/lib/modules/mtk_fm_drv.ko
+  ${RPODUCT_OUT_PATH}/lib/modules/mtk_hif_sdio.ko
+  ${RPODUCT_OUT_PATH}/lib/modules/mtk_stp_bt.ko
+  ${RPODUCT_OUT_PATH}/lib/modules/mtk_stp_gps.ko
+  ${RPODUCT_OUT_PATH}/lib/modules/mtk_stp_sdio.ko
+  ${RPODUCT_OUT_PATH}/lib/modules/mtk_stp_uart.ko
+  ${RPODUCT_OUT_PATH}/lib/modules/mtk_stp_wmt.ko
+  ${RPODUCT_OUT_PATH}/lib/modules/wlan_mt6620.ko
+}
+
+MODULE_OTHER:
+{
+}
+

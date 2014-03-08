@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+>
+					
+		<TableLayout 
+			android:layout_width="fill_parent" android:paddingTop="10dip"
+			android:layout_height="fill_parent"
+			  android:background="@drawable/bg">
+			  
+			<TableRow android:id="@+id/advance_wifi_rx"
+				android:layout_width="fill_parent" android:layout_height="fill_parent"
+				android:layout_weight="1">
+			</TableRow>
+			<TableRow android:id="@+id/advance_wifi_rx"
+				android:layout_width="fill_parent" android:layout_height="fill_parent"
+				android:layout_weight="1">
+				<TextView 			
+					android:layout_width="fill_parent" 
+					android:layout_weight="1"
+					android:layout_height="wrap_content"
+					android:textStyle="bold">
+				</TextView>
+				<Button android:id="@+id/Basic_Tool" android:layout_width="fill_parent"
+					android:layout_height="wrap_content" android:layout_weight="3"
+					android:text="@string/Basic_Tool">
+				</Button>
+				<TextView 			
+					android:layout_width="fill_parent" 
+					android:layout_weight="1"
+					android:layout_height="wrap_content"
+					android:textStyle="bold">
+				</TextView>
+
+			</TableRow>
+			
+			<TableRow android:id="@+id/advance_wifi_rx"
+				android:layout_width="fill_parent" android:layout_height="fill_parent"
+				android:layout_weight="1">
+				<TextView 			
+					android:layout_width="fill_parent" 
+					android:layout_weight="1"
+					android:layout_height="wrap_content"
+					android:textStyle="bold">
+				</TextView>
+				
+				<Button android:id="@+id/Advanced_Tool" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:layout_weight="3"
+					android:text="@string/Advanced_Tool">
+				</Button>
+				<TextView 			
+					android:layout_width="fill_parent" 
+					android:layout_weight="1"
+					android:layout_height="wrap_content"
+					android:textStyle="bold">
+				</TextView>
+			</TableRow>
+			
+			<TableRow android:id="@+id/advance_wifi_rx"
+				android:layout_width="fill_parent" android:layout_height="fill_parent"
+				android:layout_weight="3">
+			</TableRow>
+			
+		</TableLayout>
+		
+</LinearLayout>

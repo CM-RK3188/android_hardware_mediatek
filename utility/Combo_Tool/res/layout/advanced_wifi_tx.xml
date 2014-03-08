@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" 
+	android:layout_height="fill_parent" 
+	android:background="@drawable/bg"
+	>
+
+<ScrollView 
+    android:layout_width="fill_parent"
+    android:id="@+id/advance_wifi_table"
+    android:layout_height="wrap_content" 
+    >
+	<LinearLayout android:id="@+id/advance_wifi_tx"
+		android:layout_width="fill_parent" android:layout_height="fill_parent"
+		
+		 android:orientation="vertical">
+
+		<TableLayout
+			android:layout_width="fill_parent" android:layout_height="fill_parent" 
+			android:layout_marginLeft="3dip" android:stretchColumns="1">
+
+			<TableRow android:id="@+id/advance_wifi_tx"
+				android:layout_width="fill_parent" android:paddingTop="5dip"
+				android:layout_height="wrap_content">
+				<TextView android:id="@+id/WiFi_Tx_Channel_Text" android:text="@string/wifi_channel_text"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:paddingTop="12dip" android:textStyle="bold">
+				</TextView>
+				<Spinner android:id="@+id/WiFi_Tx_Channel_Spinner"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:textSize="18sp" android:singleLine="true">
+				</Spinner>
+			</TableRow>
+
+			<TableRow android:id="@+id/advance_wifi_tx"
+				android:layout_width="fill_parent" android:paddingTop="5dip"
+				android:layout_height="wrap_content">
+				<TextView android:id="@+id/WiFi_Tx_PktLength_Text" android:text="@string/wifi_pktLength_text"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:paddingTop="12dip" android:textStyle="bold">
+				</TextView>
+				<EditText android:id="@+id/WiFi_Tx_PktLength_Edit" android:text="@string/wifi_pktLength_edit"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:singleLine="true">
+				</EditText>
+			</TableRow>
+
+			<TableRow android:id="@+id/advance_wifi_tx"
+				android:layout_width="fill_parent" android:paddingTop="5dip"
+				android:layout_height="wrap_content">
+				<TextView android:id="@+id/WiFi_Tx_Pktcnt_Text" android:text="@string/wifi_pktcnt_text"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:paddingTop="12dip" android:textStyle="bold">
+				</TextView>
+				<EditText android:id="@+id/WiFi_Tx_Pktcnt_Edit" android:text="@string/wifi_pktcnt_edit"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:singleLine="true">
+				</EditText>
+			</TableRow>
+
+			<TableRow android:id="@+id/advance_wifi_tx"
+				android:layout_width="fill_parent" android:paddingTop="5dip"
+				android:layout_height="wrap_content">
+				<TextView android:id="@+id/WiFi_Tx_Power_Text" android:text="@string/wifi_tx_text"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:paddingTop="12dip" android:textStyle="bold">
+				</TextView>
+				<EditText android:id="@+id/WiFi_Tx_Power_Edit" android:text="@string/wifi_tx_edit"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:singleLine="true">
+				</EditText>
+			</TableRow>
+
+			<TableRow android:id="@+id/advance_wifi_tx"
+				android:layout_width="fill_parent" android:paddingTop="5dip"
+				android:layout_height="wrap_content">
+				<TextView android:id="@+id/WiFi_TX_Rate_Text" android:text="@string/wifi_rate_text"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:paddingTop="12dip" android:textStyle="bold">
+				</TextView>
+				<Spinner android:id="@+id/WiFi_Tx_Rate_Spinner"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:textSize="18sp" android:singleLine="true">
+				</Spinner>
+			</TableRow>
+
+			<TableRow android:id="@+id/advance_wifi_tx"
+				android:layout_width="fill_parent" android:paddingTop="5dip"
+				android:layout_height="wrap_content">
+				<TextView android:id="@+id/WiFi_Tx_Mode_Text" android:text="@string/wifi_mode_text"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:paddingTop="12dip" android:textStyle="bold">
+				</TextView>
+				<Spinner android:id="@+id/WiFi_Tx_Mode_Spinner"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:textSize="18sp" android:singleLine="true">
+				</Spinner>
+			</TableRow>
+
+			<TableRow android:id="@+id/advance_wifi_tx"
+				android:layout_width="fill_parent" android:paddingTop="5dip"
+				android:layout_height="wrap_content">
+				<TextView android:id="@+id/WiFi_Tx_Preamble_Text" android:text="@string/wifi_preamble"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:paddingTop="12dip" android:textStyle="bold">
+				</TextView>
+				<Spinner android:id="@+id/WiFi_Tx_Preamble_Spinner"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:textSize="18sp" android:singleLine="true">
+				</Spinner>
+			</TableRow>
+
+			<TableRow android:id="@+id/advance_wifi_tx"
+				android:layout_width="fill_parent" android:paddingTop="5dip"
+				android:layout_height="wrap_content">
+				<TextView android:id="@+id/WiFi_Tx_GuardInterval_Text"
+					android:text="@string/wifi_guardinterval_text"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:paddingTop="12dip" android:textStyle="bold">
+				</TextView>
+				<Spinner android:id="@+id/WiFi_Tx_GuardInterval_Spinner"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:textSize="18sp" android:singleLine="true">
+				</Spinner>
+			</TableRow>
+
+			<TableRow android:id="@+id/advance_wifi_tx"
+				android:layout_width="fill_parent" android:paddingTop="5dip"
+				android:layout_height="wrap_content">
+				<TextView android:id="@+id/WiFi_Tx_Bandwidth" android:text="@string/wifi_bandwidth"
+					android:layout_width="fill_parent" android:paddingTop="12dip"
+					android:layout_height="wrap_content" android:textStyle="bold">
+				</TextView>
+				<Spinner android:id="@+id/WiFi_TX_Bandwidth_Spinner"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:textSize="18sp" android:singleLine="true">
+				</Spinner>
+			</TableRow>
+
+		</TableLayout>
+
+		<TableLayout
+			android:layout_width="fill_parent" android:paddingTop="10dip"
+			android:layout_height="wrap_content">
+
+			<TableRow android:id="@+id/advance_wifi_tx"
+				android:layout_width="fill_parent" android:layout_height="wrap_content">
+				<Button android:id="@+id/WiFi_Tx_Start" android:layout_width="fill_parent"
+					android:layout_height="wrap_content" android:layout_weight="1"
+					android:text="@string/wifi_go">
+				</Button>
+
+				<Button android:id="@+id/WiFi_Tx_Stop" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:layout_weight="1"
+					android:text="@string/wifi_stop">
+				</Button>
+			</TableRow>
+		</TableLayout>
+	</LinearLayout>
+</ScrollView>
+</FrameLayout>

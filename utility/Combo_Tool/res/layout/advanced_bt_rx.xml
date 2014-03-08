@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:background="@drawable/bg">
+
+<ScrollView 
+    android:layout_width="fill_parent"
+    android:id="@+id/advance_wifi_table"
+    android:layout_height="wrap_content" >
+	<LinearLayout 
+		android:id="@+id/advance_bt_rx"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:orientation="vertical">
+
+		<TableLayout 
+			android:id="@+id/advance_bt_table_row_rx"
+			android:layout_width="fill_parent" 
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="3dip" 
+			android:stretchColumns="1">
+
+			<TableRow 
+				android:id="@+id/advance_bt_table_row_rx"
+				android:layout_width="fill_parent" 
+				android:paddingTop="5dip"
+				android:layout_height="wrap_content">
+				<TextView 
+					android:id="@+id/BT_Rx_Pattern_Text"
+					android:text="@string/bt_rx_pattern_text"					
+					android:layout_width="fill_parent" 
+					android:layout_height="wrap_content"
+					android:paddingTop="12dip"
+					android:textStyle="bold">
+				</TextView>
+				<Spinner 
+					android:id="@+id/BT_Rx_Pattern_Spinner" 
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content" 
+					android:textSize="18sp" 
+					android:singleLine="true">
+				</Spinner>
+			</TableRow>
+			
+			<TableRow 
+				android:id="@+id/advance_bt_table_row_rx"
+				android:layout_width="fill_parent" 
+				android:layout_height="wrap_content">
+				<TextView 
+					android:id="@+id/BT_Rx_Packet_Type_Text"
+					android:text="@string/bt_rx_packet_type_text"					
+					android:layout_width="fill_parent" 
+					android:paddingTop="12dip"
+					android:layout_height="wrap_content"
+					android:textStyle="bold">
+				</TextView>
+				<Spinner 
+					android:id="@+id/BT_Rx_Packet_Type_Spinner" 
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content" 
+					android:textSize="18sp" 
+					android:singleLine="true">
+				</Spinner>
+			</TableRow>
+			
+			<TableRow 
+				android:id="@+id/advance_bt_table_row_rx"
+				android:layout_width="fill_parent" 
+				android:layout_height="wrap_content">
+				<TextView 
+					android:id="@+id/BT_Rx_Frequency_Text"
+					android:text="@string/bt_rx_frequency_text"					
+					android:layout_width="fill_parent" 
+					android:paddingTop="12dip"
+					android:layout_height="wrap_content"
+					android:textStyle="bold">
+				</TextView>
+				<EditText 
+					android:id="@+id/BT_Rx_Frequency_Edit" 
+					android:text="@string/bt_rx_frequency_edit"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content" 
+					android:singleLine="true">
+				</EditText>
+			</TableRow>		
+			
+			<TableRow 
+				android:id="@+id/advance_bt_table_row_rx"
+				android:layout_width="fill_parent" 
+				android:layout_height="wrap_content">
+				<TextView 
+					android:id="@+id/BT_Rx_Tester_Address_Text"
+					android:text="@string/bt_rx_tester_address_text"					
+					android:layout_width="fill_parent" 
+					android:paddingTop="12dip"
+					android:layout_height="wrap_content"
+					android:textStyle="bold">
+				</TextView>
+				<EditText 
+					android:id="@+id/BT_Rx_Tester_Address_Edit" 
+					android:text="@string/bt_rx_tester_address_edit"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content" 
+					android:singleLine="true">
+				</EditText>
+			</TableRow>	
+			
+			
+			<TableRow 
+				android:id="@+id/advance_bt_table_row_rx"
+				android:layout_width="fill_parent" 
+				android:paddingTop="20dip"
+				android:layout_height="wrap_content">        	
+        	</TableRow>
+        	
+        	<View
+            	android:layout_width="fill_parent"
+            	android:layout_height="2dip"
+            	android:background="@color/gray" >
+        	</View>
+        	
+			<TableRow 
+				android:id="@+id/advance_bt_table_row_rx"
+				android:layout_width="fill_parent" 
+				android:layout_height="wrap_content">				
+				<TextView 
+					android:id="@+id/BT_Rx_Packet_Count_Text"
+					android:text="@string/bt_rx_packet_count_text"					
+					android:layout_width="fill_parent" 
+					android:paddingTop="12dip"
+					android:layout_height="wrap_content"
+					android:textStyle="bold">
+				</TextView>
+				<TextView 
+					android:id="@+id/BT_Rx_Packet_Count_Content" 
+					android:text="@string/bt_rx_packet_count_content"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content" 
+					android:layout_marginLeft="5dip" 
+					android:singleLine="true">
+				</TextView>
+			</TableRow>		
+			
+			<View
+            	android:layout_width="fill_parent"
+           		android:layout_height="1dip"
+           		android:background="@color/light_gray" >
+        	</View>
+			
+			<TableRow 
+				android:id="@+id/advance_bt_table_row_rx"
+				android:layout_width="fill_parent" 
+				android:layout_height="wrap_content">
+				<TextView 
+					android:id="@+id/BT_Rx_Pacekt_Error_Rate_Text"
+					android:text="@string/bt_rx_pacekt_error_rate_text"					
+					android:layout_width="fill_parent" 
+					android:paddingTop="12dip"
+					android:layout_height="wrap_content"
+					android:textStyle="bold">
+				</TextView>
+				<TextView 
+					android:id="@+id/BT_Rx_Pacekt_Error_Rate_Content" 
+					android:text="@string/bt_rx_pacekt_error_rate_content"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content" 
+					android:layout_marginLeft="5dip" 
+					android:singleLine="true">
+				</TextView>
+			</TableRow>		
+			
+			<View
+            	android:layout_width="fill_parent"
+           		android:layout_height="1dip"
+           		android:background="@color/light_gray" >
+        	</View>
+			
+			<TableRow 
+				android:id="@+id/advance_bt_table_row_rx"
+				android:layout_width="fill_parent" 
+				android:layout_height="wrap_content">
+				<TextView 
+					android:id="@+id/BT_Rx_Byte_Count_Text"
+					android:text="@string/bt_rx_byte_count_text"					
+					android:layout_width="fill_parent" 
+					android:paddingTop="12dip"
+					android:layout_height="wrap_content"
+					android:textStyle="bold">
+				</TextView>
+				<TextView 
+					android:id="@+id/BT_Rx_Byte_Count_Content" 
+					android:text="@string/bt_rx_byte_count_content"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content" 
+					android:layout_marginLeft="5dip" 
+					android:singleLine="true">
+				</TextView>
+			</TableRow>	
+			
+			<View
+            	android:layout_width="fill_parent"
+           		android:layout_height="1dip"
+           		android:background="@color/light_gray" >
+        	</View>
+			
+			<TableRow 
+				android:id="@+id/advance_bt_table_row_rx"
+				android:layout_width="fill_parent" 
+				android:layout_height="wrap_content">
+				<TextView 
+					android:id="@+id/BT_Rx_Bit_Error_Rate_Text"
+					android:text="@string/bt_rx_bit_error_rate_text"					
+					android:layout_width="fill_parent" 
+					android:paddingTop="12dip"
+					android:layout_height="wrap_content"
+					android:textStyle="bold">
+				</TextView>
+				<TextView 
+					android:id="@+id/BT_Rx_Bit_Error_Rate_Content" 
+					android:text="@string/bt_rx_bit_error_rate_content"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content" 
+					android:layout_marginLeft="5dip" 
+					android:singleLine="true">
+				</TextView>
+			</TableRow>	
+			<View
+            	android:layout_width="fill_parent"
+            	android:layout_height="2dip"
+            	android:background="@color/gray" >
+        	</View>
+		</TableLayout>
+		
+		<TableLayout
+			android:id="@+id/TableLayout_bt_button_rx"
+			android:layout_width="fill_parent" 
+			android:paddingTop="10dip"
+			android:layout_height="wrap_content">
+					
+			<TableRow 
+				android:id="@+id/TableLayout_bt_button_rx"
+				android:layout_width="fill_parent" 
+				android:layout_height="wrap_content">
+				<Button
+               	 	android:id="@+id/BT_Rx_Start"
+               	 	android:layout_width="fill_parent"
+                	android:layout_height="wrap_content"
+                	android:layout_weight="1"
+                	android:text="@string/bt_go" >
+            	</Button>
+            	<Button
+               	 	android:id="@+id/BT_Rx_Stop"
+               	 	android:layout_width="fill_parent"
+                	android:layout_height="wrap_content"
+                	android:layout_weight="1"
+                	android:text="@string/bt_stop" >
+            	</Button>
+			</TableRow>	
+		</TableLayout>	
+	</LinearLayout>
+</ScrollView>		
+</FrameLayout>

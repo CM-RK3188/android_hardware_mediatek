@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:background="@drawable/bg">
+
+<ScrollView 
+    android:layout_width="fill_parent"
+    android:id="@+id/advance_wifi_table"
+    android:layout_height="wrap_content" >
+	<LinearLayout 
+		android:id="@+id/advance_bt_rx"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:orientation="vertical">
+		<TableLayout 
+			android:id="@+id/advance_bt_table_row_rx"
+			android:layout_width="fill_parent" 
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="3dip" 
+			android:stretchColumns="1">
+			<TableRow 
+				android:id="@+id/advance_bt_table_row_modetest"
+				android:layout_width="fill_parent" 
+				android:paddingTop="15dip"
+				android:layout_height="wrap_content">
+				<TextView 
+					android:id="@+id/BT_TestMode_PowerLevel_Text"
+					android:text="@string/bt_testmode_powerlevel_text"					
+					android:layout_width="fill_parent" 
+					android:layout_height="wrap_content"
+					android:textStyle="bold">
+				</TextView>
+				<EditText 
+					android:id="@+id/BT_TestMode_PowerLevel_Edit" 
+					android:text="@string/bt_testmode_powerlevel_edit"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content" 
+					android:singleLine="true">
+				</EditText>
+			</TableRow>		
+		</TableLayout>
+		<TableLayout
+			android:id="@+id/TableLayout_bt_button_TestMode"
+			android:layout_width="fill_parent" 
+			android:paddingTop="10dip"
+			android:layout_height="wrap_content">
+					
+			<TableRow 
+				android:id="@+id/TableLayout_bt_button_TestMode"
+				android:layout_width="fill_parent" 
+				android:layout_height="wrap_content">
+				<Button
+               	 	android:id="@+id/BT_TestMode_Enable"
+               	 	android:layout_width="fill_parent"
+                	android:layout_height="wrap_content"
+                	android:layout_weight="1"
+                	android:text="@string/bt_enable" >
+            	</Button>
+            	<Button
+               	 	android:id="@+id/BT_TestMode_Disable"
+               	 	android:layout_width="fill_parent"
+                	android:layout_height="wrap_content"
+                	android:layout_weight="1"
+                	android:text="@string/bt_disable" >
+            	</Button>
+			</TableRow>	
+		</TableLayout>	
+	</LinearLayout>
+</ScrollView>		
+</FrameLayout>

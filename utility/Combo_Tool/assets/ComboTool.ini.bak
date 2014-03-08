@@ -1,0 +1,4 @@
+[WifiSet]
+SSID = Mediatek
+PASSWORD = 12345678
+RSSI_THRESHOLD = -70

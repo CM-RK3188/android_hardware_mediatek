@@ -1,0 +1,142 @@
+# required settings in init.rc for mt662x
+# This file is supposed to be built into
+# out/target/product/$(project)/root/init.connectivity.rc, and be imported by
+# init.$(hardware).rc. So it can take effect during system boot time.
+
+on post-fs
+
+on post-fs-data
+# mainly do mkdir/insmod in this section
+
+#
+# MT6620 related device nodes & modules & configuration (begin)
+#
+
+# wpa_supplicant control socket for android wifi.c
+    
+    mkdir /data/misc/wifi 0770 wifi wifi
+    mkdir /data/misc/wifi/sockets 0770 wifi wifi
+    mkdir /data/misc/wpa_supplicant 0770 wifi wifi
+    mkdir /data/misc/p2p_supplicant 0770 wifi wifi
+    chown wifi wifi /data/misc/wifi/wpa_supplicant.conf
+    chown wifi wifi /data/misc/wifi/p2p_supplicant.conf
+    chmod 0660 /data/misc/wifi/wpa_supplicant.conf
+    chmod 0660 /data/misc/wifi/p2p_supplicant.conf
+
+# wpa_supplicant control socket for android wifi.c
+
+    mkdir /data/misc/dhcp 0771 dhcp dhcp
+    mkdir /data/wifi 0771 wifi wifi
+    chown dhcp dhcp /data/misc/dhcp
+
+    setprop wifi.interface "wlan0"
+    setprop wifi.direct.multicast 1
+
+# Load wifi modules (done by wifi.c during turning on wifi)
+#    insmod /system/lib/modules/mtk_wmt_wifi.ko
+#    insmod /system/modules/wlan_mt6620.ko #(just for wlan test)
+
+# create char device file for WMT,GPS,BT,FM 
+    chmod 0660 /dev/stpwmt
+    chown radio system /dev/stpwmt
+    
+    chown system system /dev/wmtWifi
+    chmod 0660 /dev/wmtWifi
+
+    chown gps gps /dev/stpgps
+    chown gps system /dev/gps
+    chown gps gps /sys/class/gpsdrv/gps/pwrctl
+    chown gps gps /sys/class/gpsdrv/gps/suspend
+    chown gps gps /sys/class/gpsdrv/gps/state
+    chown gps gps /sys/class/gpsdrv/gps/pwrsave
+    chown gps gps /sys/class/gpsdrv/gps/status
+    chmod 0666 /dev/gps
+    chmod 0666 /dev/stpgps
+
+    chmod 0660 /dev/stpbt
+    chown bluetooth system /dev/stpbt
+    mkdir /data/bluetooth 0711 bluetooth bluetooth
+	mkdir /data/misc/bluedroid 0771 bluetooth bluetooth
+
+    chmod 0666 /dev/fm
+    chown system media /dev/fm
+
+
+    #start 6620_launcher
+
+#
+# MT6620 related device nodes & modules & configuration (begin)
+#
+
+# Encrypt phone function
+    setprop vold.post_fs_data_done 1
+
+on boot
+
+# MT6620 related services (Begin)
+
+
+
+service mnld /system/xbin/mnld
+#   user gps
+#   group nvram gps inet misc sdcard_rw
+    socket mnld stream 660 gps system
+    disabled
+
+
+#AGPS
+#service agpsd /system/bin/mtk_agpsd
+#    class main
+#    socket agpsd stream 666 system system
+#    chmod 770 /etc/agps_profiles_conf.xml
+
+
+service hald /system/bin/hald
+    class main
+    socket hald stream 0660 root system
+    user system
+    group system radio mount wifi inet net_admin 
+
+#wlan JB solution
+service p2p_supplicant /system/bin/logwrapper /system/bin/wpa_supplicant \
+	-iwlan0 -Dnl80211 -c/data/misc/wifi/wpa_supplicant.conf -O/data/misc/wifi/sockets -N \
+	-ip2p0 -Dnl80211 -c/data/misc/wifi/p2p_supplicant.conf -e/data/misc/wifi/entropy.bin -g@android:wpa_wlan0 -ddd
+	#   we will start as root and wpa_supplicant will switch to user wifi
+	#   after setting up the capabilities required for WEXT
+	#   user wifi
+	#   group wifi inet keystore
+	class main
+	socket wpa_wlan0 dgram 660 wifi wifi
+	disabled
+	oneshot
+
+service wpa_supplicant /system/bin/logwrapper /system/bin/wpa_supplicant \
+	-iwlan0 -Dnl80211 -c/data/misc/wifi/wpa_supplicant.conf -O/data/misc/wifi/sockets -e/data/misc/wifi/entropy.bin -g@android:wpa_wlan0 -ddd
+	#   we will start as root and wpa_supplicant will switch to user wifi
+	#   after setting up the capabilities required for WEXT
+	#   user wifi
+	#   group wifi inet keystore
+	class main
+	socket wpa_wlan0 dgram 660 wifi wifi
+	disabled
+	oneshot
+
+
+
+# monitor property and power on/off wlan 
+on property:wlan.driver.status=ok
+	write /dev/wmtWifi "1"
+
+on property:wlan.driver.status=unloaded
+	write /dev/wmtWifi "0"	
+
+# Add for wlan_loader
+#service wlanLoader /system/bin/wlan_loader    
+#    user root    
+#    group root    
+#    class main    
+#    oneshot
+
+# MT6620 related services (End)
+
+

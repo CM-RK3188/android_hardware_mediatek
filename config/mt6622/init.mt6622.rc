@@ -1,0 +1,44 @@
+# required settings in init.rc for mt662x
+# This file is supposed to be built into
+# out/target/product/$(project)/root/init.connectivity.rc, and be imported by
+# init.$(hardware).rc. So it can take effect during system boot time.
+
+on post-fs
+
+on post-fs-data
+# mainly do mkdir/insmod in this section
+
+#
+# MT6622 related device nodes &  (begin)  ttyO4 operations should in init.omap4pandaboard.rc ??
+#
+
+#for bt
+    chmod 0660 /dev/ttyO1
+    chown bluetooth system /dev/ttyO1
+    chmod 0660 /dev/bthwctl
+    chown bluetooth system /dev/bthwctl
+    mkdir /data/bluetooth 0711 bluetooth bluetooth
+    mkdir /data/misc/bluedroid 0771 bluetooth bluetooth
+
+# for bwcs
+    mkdir /data/bwcs 0777 bluetooth system
+
+on boot
+
+#Add for bt-pan network interface,let it can start dhcpcd daemon
+service dhcpcd_bt-pan /system/bin/logwrapper /system/bin/dhcpcd -ABKL
+	class main
+	disabled
+    oneshot
+
+service iprenew_bt-pan /system/bin/logwrapper /system/bin/dhcpcd -n
+	class main
+	disabled
+	oneshot
+
+# Encrypt phone function
+    setprop vold.post_fs_data_done 1
+
+# MT6622 related services (End)
+
+

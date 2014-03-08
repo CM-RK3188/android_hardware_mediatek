@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, HelloWorld2!</string>
+    <string name="app_name">Mediatek Connectivity Combo Tool v1.5</string>
+    <string name="app_name_ver">Mediatek Connectivity Combo Tool v1.5</string>
+    <string name="basic_tool">Mediatek Connectivity Tool(Basic_Tool)</string>
+    <string name="advanced_tool">Mediatek Connectivity Tool(Advanced_Tool)</string>
+	<string name="str_service_online">str_service_online</string>
+	<string name="str_button2">str_button2</string>
+	<string name="str_service_offline">str_service_offline</string>
+	<string name="str_error_stopservice">str_error_stopservice</string>
+	<string name="str_message_from_service">str_message_from_service</string>
+	<string name="str_button1">str_button1</string>
+
+
+	<string name="Basic_Tool">Basic_Tool</string>
+	<string name="Advanced_Tool">Advanced_Tool</string>
+	<string name="Enable_WFA_Test">Enable WFA Test</string>
+	<string name="Enable_CTIA_Test">Enable CTIA Test</string>
+	<string name="Connect">Connect</string>
+	<string name="Disconnect">Disconnect</string>
+	<string name="Scan">Scan</string>
+	<string name="StopScan">Stop</string>
+	<string name="SSID">SSID: </string>
+	<string name="mtklab">mtklab</string>
+	<string name="PASSWORD">PASSWORD:</string>
+	<string name="Default_Password">12345678 </string>
+	<string name="RSSI_Threshold">RSSI Threshold</string>
+	<string name="Default_Threshold">-70</string>
+	<string name="Status">Status:</string>
+	<string name="Disconnected">Disconnected </string>
+	<string name="Rst_RSSI">RSSI = ? dBm</string>
+	<string name="Result">Result:</string>
+	<string name="Tmp">\?</string>
+	<string name="Inquiry">Inquiry</string>
+	<string name="Stop_Inquiry">Stop Inquiry</string>
+
+    <!-- BlutTooth start -->  	
+  	<string name="bt_tx_pattern_text">Tx Pattern:</string> 
+  	<string name="bt_channel_text">Channel:</string>    
+  	<string name="bt_tx_frequency_text">Tx Frequency:</string> 
+  	<string name="bt_tx_frequency_edit">20</string> 
+  	<string name="bt_packet_type_text">Packet Type:</string>   
+  	<string name="bt_packet_length_text">Packet Length:</string> 
+  	<string name="bt_packet_length_edit">200</string> 
+  	<string name="bt_tx_power_text">Tx Power:</string>
+  	<string name="bt_tx_power_edit">50</string>
+  	<string name="bt_tx_modulation_text">Modulation:</string>
+  	<string name="bt_tx_modulation_edit">mode?</string>
+  	
+  	<string name="bt_rx_pattern_text">Rx Pattern:</string> 
+  	<string name="bt_rx_packet_type_text">Rx Packet Type:</string> 
+  	<string name="bt_rx_frequency_text">Rx Frequency\n[0-78]:</string>   
+  	<string name="bt_rx_frequency_edit">60</string> 
+  	<string name="bt_rx_tester_address_text">Tester Address\n(Hex):</string> 
+  	<string name="bt_rx_tester_address_edit">ab:a3:21:3a:4f:2d</string>
+  	<string name="bt_rx_packet_count_text">Rx Packet Count:</string> 
+  	<string name="bt_rx_packet_count_content">0</string>
+  	<string name="bt_rx_pacekt_error_rate_text">Packet Error Rate:</string> 
+  	<string name="bt_rx_pacekt_error_rate_content">0.000%</string>
+  	<string name="bt_rx_byte_count_text">Rx Byte Count:</string> 
+  	<string name="bt_rx_byte_count_content">0</string>
+  	<string name="bt_rx_bit_error_rate_text">Bit Error Rate:</string> 
+  	<string name="bt_rx_bit_error_rate_content">0.000%</string>
+  	
+  	<string name="bt_go">Start</string>
+	<string name="bt_stop">Stop</string>
+	<string name="bt_enable">Enable</string>
+	<string name="bt_disable">Disable</string>
+	<string name="bt_testmode_powerlevel_text">Power Level[0,7]: </string>
+	<string name="bt_testmode_powerlevel_edit">5</string>
+	
+	<string name="OK">OK</string>
+	<string name="Error">Error</string>   
+    <string name="Success">Success</string>     	
+	<string name="BT_turn_bt_off">Please turn off Bluetooth first</string>   
+	<string name="BT_no_dev">No bluetooth device found</string>  
+	<string name="BT_init_dev">Please wait for device to initialize ...</string>   	
+	<string name="BT_relayer_start">BT relayer is initializing, please wait...</string>   	 
+ 	<string name="BT_open">Please wait for Bluetooth to turn on ...</string> 
+ 	<string name="BT_close">Please wait for Bluetooth to turn off ...</string>   	
+ 	<string name="BT_exit_em">SSP Debug mode is open, exit EngineerMode Bluetooth test.</string>   
+  	<string name="BT_data_fail">Transmit data failed, please try again.</string>
+    <string name="BT_tx_test">Tx test operation is in process, please wait ...</string>   
+    <string name="BT_no_sig_rx_fail">No signal rx test failed.</string>  
+    
+    <string name="BTRxTitle">Bluetooth_Rx</string> 
+	
+    <!-- BlutTooth end -->
+
+    <!-- WiFi start -->
+    
+    <string name="wifi_freqoffset_text">FreqOffset: </string>
+    <string name="wifi_freqoffset_edit">30</string>
+    <string name="wifi">WiFi</string>
+    <string name="wifi_item_tx">Tx</string>
+    <string name="wifi_item_rx">Rx</string>
+    <string name="wifi_item_mcr">MCR</string>
+    <string name="wifi_item_nvram">NVRAM</string>
+    <string name="wifi_item_dpd">DPD Calibration</string>
+    <string name="wifi_item_tem">Temperature Sensor</string>
+    <string name="wifi_dialog_warn">Error</string>
+    <string name="wifi_dialog_warn_message">Please turn off Wi-Fi first</string>
+    <string name="wifi_dialog_init">Progress</string>
+    <string name="wifi_dialog_init_message">Please wait for device to initialize ...</string>
+    <string name="wifi_dialog_fail">Error</string>
+    <string name="wifi_dialog_fail_message">Enable Wi-Fi failed</string>
+    <string name="wifi_dialog_error">Error</string>
+    <string name="wifi_dialog_error_message">Wifi is not initialized</string>
+    <string name="wifi_dialog_input_file_name">Please input a file name</string>
+    <string name="wifi_toast_select_error">item select error</string>
+    <string name="wifi_toast_packet_error">"Do not accept packet count = 0, unlimited on Android"</string>
+    <string name="wifi_ok">OK</string>
+    <string name="wifi_empty"></string>
+    <string name="wifi_zero">0</string>
+    <string name="wifi_tx">WiFi_Tx</string>
+    <string name="wifi_rx">WiFi_Rx</string>
+    <string name="wifi_eeprom">WiFi_NVRAM</string>
+    <string name="wifi_temperature_sensor">WiFi_Temperature_Sensor</string>
+    <string name="wifi_mcr">WiFi_MCR</string>
+    <string name="wifi_channel_text">Channel:</string>
+    <string name="wifi_preamble">Preamble:</string>
+    <string name="wifi_preamble11n">11nPreamble:</string>    
+    <string name="wifi_pkt_text">Pkt length:</string>
+    <string name="wifi_pkt_edit">1024</string>
+    <string name="wifi_pktcnt_text">Pkt cnt:</string>
+    <string name="wifi_pktcnt_edit">3000</string>
+    <string name="wifi_pktLength_text">Pkt Length:</string>
+    <string name="wifi_pktLength_edit">1024</string>
+    <string name="wifi_GIType">GIType: </string>
+    
+    <string name="wifi_tx_text">Tx Power(dBm):</string>
+    <string name="wifi_tx_edit">18.0</string>
+    <string name="wifi_tx_gain_edit">22</string>
+    <string name="wifi_tx_gain_format">%.1f</string>
+    <string name="wifi_rate_text">Rate:</string>
+    <string name="wifi_mode_text">Mode:</string>
+    <string name="wifi_xtaltrim_text">Xtal Trim:</string>
+    <string name="wifi_xtaltrim_edit"></string>
+    <string name="wifi_xtaltrim_read">Read</string>
+    <string name="wifi_xtaltrim_write">Write</string>
+    <string name="wifi_alc">ALC Function for Normal Packet Tx/Rx</string>
+    <string name="wifi_bandwidth">Bandwidth:</string>
+    <string name="wifi_guard_interval">Guard interval:</string>
+    <string name="wifi_go">Start</string>
+    <string name="wifi_stop">Stop</string>
+    <string name="wifi_fcs_text">FCS ERR:</string>
+    <string name="wifi_fcs_content">0</string>
+    <string name="wifi_rx_text">RX OK:</string>
+    <string name="wifi_rx_content">0</string>
+    <string name="wifi_per_text">PER:</string>
+    <string name="wifi_per_content">0%</string>
+    <string name="wifi_wordaccess_text">WORD Access:</string>
+    <string name="wifi_addr_text">addr(h,byte):</string>
+    <string name="wifi_addr_content"></string>
+    <string name="wifi_value_text">value(h):</string>
+    <string name="wifi_value_content"></string>
+    <string name="wifi_read_word">Read</string>
+    <string name="wifi_write_word">Write</string>
+    <string name="wifi_stringaccess_text">Byte String Access:</string>
+    <string name="wifi_addr_text_string">addr(h,byte):</string>
+    <string name="wifi_addr_content_string"></string>
+    <string name="wifi_length_text_string">length(byte):</string>
+    <string name="wifi_length_content_string"></string>
+    <string name="wifi_value_text_string">value(h):</string>
+    <string name="wifi_value_content_string"></string>
+    <string name="wifi_savebtn">NVRAM Save As File</string>
+    <string name="wifi_burnbtn">Burn From File</string>
+    <string name="wifi_readallbtn">Read All</string>
+    <string name="wifi_clearbtn">Clear</string>
+    <string name="wifi_misc_text">Temperature sensor measurement:</string>
+    <string name="wifi_misc_gobtn">Go</string>
+    <string name="wifi_guardinterval_text">Guard \nINterval:</string>
+    <string name="wifi_misc_stopbtn">Stop</string>
+    <string name="wifi_misc_clearbtn">Clear</string>
+    <string name="wifi_mcr_text">MCR:</string>
+    <string name="wifi_mcr_addr_text">Addr(h):</string>
+    <string name="wifi_mcr_value_text">Value(h):</string>
+    <string name="wifi_mcr_readbtn">Read</string>
+    <string name="wifi_mcr_writebtn">Write</string>
+    <string name="wifi_eeprom_save_dialog_title">Save as</string>
+    <string name="wifi_eeprom_save_dir">Please input a file name</string>
+    <string name="wifi_eeprom_save_dir_done">OK</string>
+    <string name="file_list_title">Please select a file to burn</string>
+    <string name="wifi_dpd_text">DPD calibration:</string>
+    <string name="wifi_dpd_calibration">calibration</string>
+    <string name="wifi_dpd_import">import DPD parameters from file</string>
+    <string name="wifi_dpd_read">read DPD parameters</string>
+    <string name="wifi_dpd_save">save DPD parameters to file</string>
+    <string name="wifi_dpd_info"></string>
+    <string name="wifi_wfa_enabler">Enable WFA test UI</string>
+    <string name="wifi_ctia_enabler">Enable CTIA test UI</string>
+    <string name="wifi_help_msg" product="default">
+    
+
+    Feature name: WiFi\n\n
+    Used to do WiFi test and check WiFi status by RD.\n\n
+    There are 4 test items: Tx, Rx, MCR, NVRAM and some check boxes as a switch.\n\n
+    Tx: Test WiFi send packages at different frequencies, rates, power and so on. It needs special instruments to analyze the results.\n\n
+    Rx: Test WiFi receive packages at different frequencies and bandwidth. It will show the results of received packages.\n\n
+    MCR: Read and write WiFi control register. Warning: The operation of non-professionals is forbidden.\n\n
+    NVRAM: Read and write WiFi NVRAM, could accessed in word or byte string.\n\n
+    Switch: Some switches used by RD.\n\n</string>
+
+    <!-- WiFi end -->
+    
+    <!-- YGPS start -->
+    <string name="copyright_info_text">Copyright © 2009 Ludwig M Brinckmann
+		ludwigbrinckmann@gmail.com
+
+		The source code for this application is
+		available from
+		http://www.yunnanexplorer.com/
+
+		This program is free
+		software: you can redistribute it and/or modify
+		it under the terms of
+		the GNU General Public License as published by
+		the Free Software
+		Foundation, either version 3 of the License, or
+		(at your option) any
+		later version.
+
+		This program is distributed in the hope that it will be
+		useful,
+		but WITHOUT ANY WARRANTY; without even the implied warranty of
+		MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+		GNU
+		General Public License for more details.
+
+		You should have received a
+		copy of the GNU General Public License
+		along with this program. If not,
+		see http://www.gnu.org/licenses/.
+
+		This program incorporates code by J
+		Latimer released under the following
+		license:
+
+		Copyright © 2008 Jon
+		Larimer jlarimer@gmail.com
+
+		Licensed under the Apache License, Version
+		2.0 (the "License");
+		you may not use this file except in compliance
+		with the License.
+		You may obtain a copy of the License at
+
+		http://www.apache.org/licenses/LICENSE-2.0
+
+		Unless required by
+		applicable law or agreed to in writing, software
+		distributed under the
+		License is distributed on an "AS IS" BASIS,
+		WITHOUT WARRANTIES OR
+		CONDITIONS OF ANY KIND, either express or
+		implied.
+		See the License for
+		the specific language governing permissions and
+		limitations under the
+		License.</string>
+    <string name="empty"></string>
+    <string name="menu_copyright">Copyright</string>
+    <string name="menu_ublox">Initialize GPS Chip</string>
+    <string name="menu_settings">Ublox Settings</string>
+    <string name="menu_showloc">Show Location</string>
+    <string name="menu_hideloc">Hide Location</string>
+    <string name="menu_info">Info</string>
+    <string name="menu_satellite">Satellite</string>
+    <string name="title_time">Time:</string>
+    <string name="time"></string>
+    <string name="title_lat">Latitude:</string>
+    <string name="latitude"></string>
+    <string name="title_lon">Longitude:</string>
+    <string name="first_latitude_text">First Latitude:</string>
+    <string name="first_longtitude_text">First Longitude:</string>
+    <string name="longitude"></string>
+    <string name="title_alt">Altitude:</string>
+    <string name="altitude"></string>
+    <string name="title_acc">Accuracy:</string>
+    <string name="accuracy"></string>
+    <string name="title_bear">Bearing:</string>
+    <string name="bearing"></string>
+    <string name="title_speed">Speed:</string>
+    <string name="speed"></string>
+    <string name="nema"></string>
+    <string name="debug"></string>
+    <string name="title_ttff">TTFF:</string>
+    <string name="title_fix">Fix:</string>
+    <string name="ttff"></string>
+    <string name="fix"></string>
+    <string name="title_provider">Provider:</string>
+    <string name="title_status">Status:</string>
+    <string name="provider"></string>
+    <string name="status"></string>
+    <string name="title_distance">Distance:</string>
+    <string name="distance"></string>
+    <string name="title_date">Date:</string>
+    <string name="date"></string>
+    <string name="title_chip_version">Chip version:</string>
+    <string name="chipversion">UNKNOWN</string>
+    <string name="title_mnl_version">MNL version:</string>
+    <string name="mnlversion">UNKNOWN</string>
+    <string name="hot">hot</string>
+    <string name="warm">warm</string>
+    <string name="cold">cold</string>
+    <string name="full">full</string>
+    <string name="restart">AGPS restart</string>
+    <string name="satellites">Satellites</string>
+    <string name="information">Information</string>
+    <string name="gps_test">GPS Test</string>
+    <string name="nmea_log">NMEA Log</string>
+    <string name="nmea_start">start</string>
+    <string name="nmea_stop">stop</string>
+    <string name="nmea_clear">clear</string>
+    <string name="nmea_save">save</string>
+    <string name="nmea_hint">The NMEA log below is being saved:</string>
+    <string name="gps_test_start">Start</string>
+    <string name="gps_test_times">Times 0 – 999:</string>
+    <string name="gps_test_interval">Interval 0 – 999(s):</string>
+    <string name="no_sdcard">Please check the SD card.</string>
+    <string name="gps_test_current_times">Current Times:</string>
+    <string name="need_3d_fix">Need 3D Fix</string>
+    <string name="last_ttff">Last TTFF:</string>
+    <string name="reconnect_countdown">Reconnect count down:</string>
+    <string name="gps_test_stop">Stop</string>
+    <string name="gps_test_mean_ttff">Mean TTFF:</string>
+    <string name="nmea_dbg_dbg">Undried</string>
+    <string name="nmea_dbg_nmea">Undried</string>
+    <string name="nmea_dbg_dbg_file">Undried</string>
+    <string name="nmea_dbg_nmea_file">Undried</string>
+    <string name="hot_still">Undried</string>
+    <string name="gps_hw_test">Undried</string>
+    <string name="gps_jamming_scan">JAM scan</string>
+    <string name="jamming_scan_times">20</string>
+    <string name="ygps_copyright_infor">YGPS Copyright Information</string>
+    <string name="toast_input_times">Please input test times</string>
+    <string name="toast_input_range">Please input a number between 0 and 999</string>
+    <string name="toast_input_interval">Please input interval</string>
+    <string name="btn_name_dbg2socket_enable">Enable dbg2socket [Need Restart]</string>
+    <string name="btn_name_dbg2socket_disable">Disable dbg2socket [Need Restart]</string>
+    <string name="btn_name_nmea2socket_enable">Enable nmea2socket [Need Restart]</string>
+    <string name="btn_name_nmea2socket_disable">Disable nmea2socket [Need Restart]</string>
+    <string name="btn_name_dbg2file_enable">Enable dbg2file [Need Restart]</string>
+    <string name="btn_name_dbg2file_disable">Disable dbg2file [Need Restart]</string>
+    <string name="btn_name_dbg2ddms_disable">Disable dbg2ddms [Need Restart]</string>
+    <string name="btn_name_dbg2ddms_enable">Enable dbg2ddms [Need Restart]</string>
+    <string name="btn_name_hotstill_disable">Disable Hotstill [Need Restart]</string>
+    <string name="btn_name_hotstill_enable">Enable Hotstill [Need Restart]</string>
+    <string name="btn_name_dbg2gpsdoctor_enable">Enable dbg2GPSDoctor [Need Restart]</string>
+    <string name="btn_name_dbg2gpsdoctor_disable">Disable dbg2GPSDoctor [Need Restart]</string>
+    <string name="toast_save_log_succeed_to">Save NmeaLog to %1$s Succeed!</string>
+    <string name="toast_save_log_succeed">Save NmeaLog failed</string>
+    <string name="toast_save_log_failed">Save NmeaLog failed</string>
+    <string name="toast_create_file_failed">Create new file failed</string>
+    <string name="toast_nmealog_save_at">NMEA log saved at %1$s</string>
+    <string name="toast_no_log">There is no log to save!</string>
+    <string name="toast_exceed_time">Exceed %1$s seconds</string>
+    <string name="toast_test_interrupted">GPS auto test interrupted</string>
+    <string name="toast_jamming_succeed">Jamming scan setting success</string>
+    <string name="toast_jamming_failed">Jamming scan setting fail</string>
+    <string name="toast_first_fix">GPS Fix after %1$d %2$s</string>
+    <string name="menu_run_bg_disable">Disable Run in BG. [Need Restart.]</string>
+    <string name="menu_run_bg_enable">Enable Run in BG. [Need Restart.]</string>
+    <string name="provider_status_enabled">%1$s enabled</string>
+    <string name="provider_status_disabled">%1$s disabled</string>
+    <string name="gps_status_started">STARTED</string>
+    <string name="gps_status_stopped">STOPPED</string>
+    <string name="gps_status_first_fix">FIRST_FIX</string>
+    <string name="gps_status_unavailable">UNAVAILABLE</string>
+    <string name="gps_status_available">AVAILABLE</string>
+    <string name="gps_status_unknown">UNKNOWN</string>
+    <string name="time_unit_ms">&#160;ms</string>
+    <string name="dialog_title_stop">Stopping</string>
+    <string name="dialog_message_stop">Please wait …</string>
+    <string name="dialog_title_error">Error</string>
+    <string name="dialog_message_error">Error dialog ID</string>
+    <string name="command_error">Command error</string>
+    <string name="gps_test_running_warn">Please stop GPS test</string>
+    <!-- YGPS end -->
+    
+  	<!-- FM FMTransmitter Start -->
+    <string name="max_channels"
+    translatable="false">Max Channels:</string>
+    <string name="default_max_channels"
+    translatable="false">10</string>
+    <string name="seatch_btn"
+    translatable="false">Search</string>
+    <string name="available_channel_label"
+    translatable="false">Ava Channels:</string>
+    <string name="default_channel_fre"
+    translatable="false">87.6</string>
+    <string name="set_btn"
+    translatable="false">Set</string>
+    <string name="default_music_name"
+    translatable="false">music.mp3</string>
+    <string name="play_btn"
+    translatable="false">Play</string>
+    <string name="rds_label"
+    translatable="false">RDS:</string>
+    <string name="default_rds_content"
+    translatable="false">mtk rds</string>
+    <string name="space"
+    translatable="false"></string>
+    <string name="default_power_btn_content"
+    translatable="false">110.5  Turn on</string>
+    <!-- FM FMTransmitter End -->
+    
+    <!-- FM Radio Start -->
+    <string name="FMR_Freq_text" translatable="false">Freq(MHz):</string>
+    <string name="FMR_Freq_tune" translatable="false">Tune</string>
+    <string name="FMR_Antenna_text" translatable="false">Antenna Type</string>
+    <string name="FMR_Antenna_short" translatable="false">Short</string>
+    <string name="FMR_Antenna_long" translatable="false">EarPhone</string>
+    <string name="FMR_Status_text" translatable="false">Status</string>
+    <string name="FMR_Force_Stereomono_text" translatable="false">Force Set:</string>
+    <string name="FMR_Status_Stereomono_text" translatable="false">Stereo/Mono:</string>
+    <string name="FMR_Stereomono_stereo" translatable="false">Stereo</string>
+    <string name="FMR_Stereomono_mono" translatable="false">Mono</string>
+    <string name="FMR_Status_Stereomono" translatable="false">detecting...</string>
+    <string name="FMR_Status_RSSI_text" translatable="false">RSSI(dBm):</string>
+    <string name="FMR_Status_RSSI" translatable="false">detecting...</string>
+    <string name="FMR_Status_Caparray_text" translatable="false">CapArray(pF):</string>
+    <string name="FMR_Status_Caparray" translatable="false">detecting...</string>
+    <string name="FMR_RDS_text" translatable="false">RDS</string>
+    <string name="FMR_RDS_Ratio_text" translatable="false">Ratio:</string>
+    <string name="FMR_RDS_Ratio" translatable="false">detecting...</string>
+    <string name="FMR_RDS_PS_text" translatable="false">PS:</string>
+    <string name="FMR_RDS_PS" translatable="false">None.</string>
+    <string name="FMR_RDS_RT_text" translatable="false">RT:</string>
+    <string name="FMR_RDS_RT" translatable="false">None.</string>
+    <string name="FMR_Hardware_version" translatable="false">Hardware Version</string>
+    <string name="FMR_Chip_ID_text" translatable="false">Chip ID</string>
+    <string name="FMR_Chip_ID" translatable="false">None.</string>
+    <string name="FMR_ECO_Version_text" translatable="false">ECO Version</string>
+    <string name="FMR_ECO_Version" translatable="false">None.</string>
+    <string name="FMR_Patch_Version_text" translatable="false">Patch Version</string>
+    <string name="FMR_Patch_Version" translatable="false">None.</string>
+    <string name="FMR_DSP_Version_text" translatable="false">DSP Version</string>
+    <string name="FMR_DSP_Version" translatable="false">None.</string>
+    <string name="FMR_Freq_Edit_text">90.0</string>
+    <!-- FM Radio End -->
+    
+    <!-- dialog Start -->
+    <string name="dialog_title">Progress</string>
+    <string name="dialog_message_wifi">Please wait for wifi device initialize...</string>
+    <string name="dialog_message_bt">Please wait for bt device initialize...</string>
+    <!-- dialog End -->
+    
+</resources>

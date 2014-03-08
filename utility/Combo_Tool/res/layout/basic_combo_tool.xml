@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:background="@drawable/bg">
+
+
+	<LinearLayout android:id="@+id/wifi" 
+		android:layout_width="fill_parent" android:layout_height="fill_parent"
+		android:orientation="vertical">
+		<TableLayout
+			android:id="@+id/TableLayout_basic_button_rx"
+			android:layout_width="fill_parent" 
+			android:paddingTop="10dip"
+			android:layout_height="wrap_content">
+		<TableRow android:id="@+id/TableRow01" android:layout_width="fill_parent"
+			android:layout_height="wrap_content">
+			<Button android:id="@+id/Button_wifi_Connect"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:text="@string/Connect"
+				android:layout_weight="2"
+				>
+			</Button>
+			<Button android:id="@+id/Button_wifi_Disconnect"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:text="@string/Disconnect"
+				android:layout_weight="3">
+			</Button>
+			<Button android:id="@+id/Button_wifi_Scan"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:text="@string/Scan"
+				android:layout_weight="2">
+			</Button>
+			<Button android:id="@+id/Button_wifi_StopScan"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:text="@string/StopScan"
+				android:layout_weight="2">
+			</Button>
+		</TableRow>
+		</TableLayout>
+		<ListView android:id="@+id/ListView_wifi_scan"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"></ListView>
+		<ScrollView android:id="@+id/ScrollView01"
+			android:layout_width="fill_parent" android:layout_height="fill_parent"
+			android:scrollbars="vertical">
+			<LinearLayout android:id="@+id/wifiscroll"
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent" android:orientation="vertical">
+
+
+				<TableLayout android:id="@+id/TableLayout01"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:stretchColumns="1">
+
+					<TableRow android:id="@+id/TableRow01"
+						android:layout_width="fill_parent" android:layout_height="wrap_content">
+						<TextView android:text="@string/SSID" android:id="@+id/TextView01"
+							android:layout_width="fill_parent" android:layout_height="wrap_content"
+							android:textStyle="bold"></TextView>
+						<EditText android:id="@+id/SSID" android:layout_width="fill_parent"
+							android:layout_height="wrap_content" android:text="@string/mtklab"
+							android:textSize="18sp" android:singleLine="true">
+						</EditText>
+					</TableRow>
+
+					<TableRow android:id="@+id/TableRow01"
+						android:layout_width="fill_parent" android:layout_height="wrap_content">
+						<TextView android:text="@string/PASSWORD" android:id="@+id/TextView02"
+							android:layout_width="wrap_content" android:layout_height="wrap_content"
+							android:textStyle="bold"></TextView>
+						<EditText android:id="@+id/PASSWORD"
+							android:layout_width="fill_parent" android:layout_height="wrap_content"
+							android:text="@string/Default_Password" android:textSize="18sp"
+							android:singleLine="true" android:password="true">
+						</EditText>
+					</TableRow>
+
+					<TableRow android:id="@+id/TableRow01"
+						android:layout_width="fill_parent" android:layout_height="wrap_content">
+						<TextView android:text="@string/RSSI_Threshold" android:id="@+id/TextView02"
+							android:layout_width="fill_parent" android:layout_height="wrap_content"
+							android:textStyle="bold"></TextView>
+						<EditText android:id="@+id/RSSI_Threshold"
+							android:layout_width="fill_parent" android:layout_height="wrap_content"
+							android:text="@string/Default_Threshold" android:textSize="18sp" android:singleLine="true">
+						</EditText>
+					</TableRow>
+
+
+				</TableLayout>
+
+				<TextView android:text="@string/Status" android:id="@+id/TextView02"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:textStyle="bold"></TextView>
+				<TextView android:text="@string/Disconnected" android:id="@+id/Connect_Content"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+				<TextView android:text="@string/Rst_RSSI" android:id="@+id/RSSI_Content"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+				<TextView android:text="@string/Result" android:id="@+id/TextView02"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:textStyle="bold"></TextView>
+				<TextView android:text="@string/Tmp" android:id="@+id/Result_Content"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"></TextView>
+				<TableLayout android:id="@+id/TableLayout01"
+					android:layout_width="wrap_content" android:layout_height="wrap_content">
+
+				</TableLayout>
+			
+			</LinearLayout>
+		</ScrollView>
+
+		
+
+	</LinearLayout>
+
+
+	<LinearLayout android:id="@+id/bt"
+		android:layout_width="fill_parent" android:layout_height="fill_parent"
+		android:orientation="vertical">
+		<TableRow android:id="@+id/TableRow01" android:layout_width="fill_parent"
+			android:layout_height="wrap_content">
+			<Button android:id="@+id/Button_bt_inquiry"
+				android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1"
+				android:text="@string/Inquiry">
+			</Button>
+			<Button android:id="@+id/Button_bt_stop_inquiry"
+				android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1"
+				android:text="@string/Stop_Inquiry">
+			</Button>
+		</TableRow>
+
+		<ListView android:id="@+id/ListView_bt_inquiry"
+			android:layout_width="wrap_content" android:layout_height="wrap_content">
+		</ListView>
+	</LinearLayout>
+
+
+
+
+
+
+</FrameLayout>
+
+
+
+

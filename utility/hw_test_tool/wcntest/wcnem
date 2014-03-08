@@ -1,0 +1,276 @@
+#!/system/bin/sh -e 
+#Description: WCNSE/SS1 BGF auto test tool
+#Author: Hongcheng Xia
+#Date: 2012.03.19
+#Version: 1.0
+
+# Path define
+APPPATH=/system/bin/
+WCNAPP=wcntestd
+WCNINFILE=/data/data/wcnin.tmp
+WCNOUTFILE=/data/data/wcnout.tmp
+WCNERRFILE=/data/data/wcnerr.tmp
+
+# Parameter setting
+PARA0=$1
+PARA1=$2
+PARA2=$3
+PARA3=$4
+PARA4=$5
+CNT=$#
+
+# FM cmd define
+OPENDEV=fmopen
+POWERON=fmpwron
+POWERDOWN=fmpwroff
+CLOSEDEV=fmclose
+TUNE=fmtune
+GETRSSI=fmrssi
+SEEK=fmseek
+SCAN=fmscan
+TXSCAN=fmtxscan
+WCNEXIT=bye
+
+# GPS cmd define
+OPENGPS=gopen
+CLOSEGPS=gclose
+HTTFFGPS=ghttff
+WTTFFGPS=gwttff
+CTTFFGPS=gcttff
+FTTFFGPS=gfttff
+GETVERGPS=ggetver
+
+#GPS cmd handler
+gps_start(){
+  echo "gps_start"
+  echo $OPENGPS >> $WCNINFILE 
+}
+
+gps_stop(){
+  echo "gps_stop"
+  echo $CLOSEGPS >> $WCNINFILE 
+}
+
+gps_httff(){
+  echo "gps_httff"
+  echo $HTTFFGPS >> $WCNINFILE 
+}
+
+gps_wttff(){
+  echo "gps_wttff"
+  echo $WTTFFGPS >> $WCNINFILE 
+}
+
+gps_cttff(){
+  echo "gps_cttff"
+  echo $CTTFFGPS >> $WCNINFILE 
+}
+
+gps_fttff(){
+  echo "gps_fttff"
+  echo $FTTFFGPS >> $WCNINFILE 
+}
+
+gps_getver(){
+  echo "gps_getver"
+  echo $GETVERGPS >> $WCNINFILE
+}
+
+# FM cmd handler
+start(){
+	echo "start"
+	echo $OPENDEV >> $WCNINFILE
+	echo $POWERON >> $WCNINFILE
+}
+
+stop(){
+	echo "stop"	
+	echo $POWERDOWN >> $WCNINFILE
+	echo $CLOSEDEV >> $WCNINFILE
+}
+
+restart(){
+	echo "restart"
+}
+
+tune(){
+		echo "tune:[$PARA2]"
+		echo "$TUNE $PARA2" >> $WCNINFILE
+}
+
+seek(){
+		echo "seek"
+		echo "$SEEK $PARA2" >> $WCNINFILE
+}
+
+scan(){
+	echo "scan"
+	echo $SCAN >> $WCNINFILE
+}
+
+rdsrxonoff(){
+	echo "rdsRx"
+}
+
+rdstxonoff(){
+	echo "rdsTx"
+}
+
+txscan(){
+	echo "txscan"
+	echo "$TXSCAN $PARA2" >> $WCNINFILE
+}
+
+rdstxtune(){
+	echo "rdsTxtune: $PARA2"
+}
+
+
+do_fm_cmd_dispatcher(){
+	echo "$PARA0" "$PARA1"
+	case "$PARA1" in
+	start)
+		start
+		;;
+	
+	stop)
+		stop
+		;;
+	
+	restart)
+		restart
+		;;
+	
+	tune)
+		tune
+		;;
+	
+	txscan)
+		txscan
+		;;
+	
+	seek)
+		seek
+		;;
+	
+	scan)
+		scan
+		;;
+	
+	rdsrxonoff)
+		rdsrxonoff
+		;;
+	
+	rdstxonoff)
+		rdstxonoff
+		;;
+	
+	rdstxtune)
+		rdstxtune
+		;;
+	
+	*)
+		echo "usage:[$0 $1 <cmd> <para>]"
+		exit -1
+		;;
+	
+	esac
+}
+
+do_gps_cmd_dispatcher(){
+	echo "$PARA0" "$PARA1"
+	case "$PARA1" in
+	start)
+		gps_start
+		;;
+	
+	stop)
+		gps_stop
+		;;
+
+  httff)
+    gps_httff
+    ;;
+    
+  wttff)
+    gps_wttff
+    ;;
+    
+  cttff)    
+    gps_cttff
+    ;;
+    
+  fttff)
+    gps_fttff
+    ;;
+    
+  getver)
+    gps_getver
+    ;;
+
+	*)
+		echo "usage:[$0 $1 <cmd> <para>]"
+		exit -1
+		;;
+	
+	esac
+}
+
+
+# WCN init/deinit
+do_wcn_test_init(){
+	echo "init"
+	touch "$WCNINFILE"
+    touch "$WCNOUTFILE" 	
+	touch "$WCNERRFILE"
+	rm "$WCNINFILE" 	
+	rm "$WCNOUTFILE" 	
+	rm "$WCNERRFILE" 	
+	"$APPPATH""$WCNAPP" "$WCNINFILE" "$WCNOUTFILE" "$WCNERRFILE"
+	sleep 1
+	echo "" > $WCNINFILE
+	echo "" > $WCNOUTFILE
+	echo "" > $WCNERRFILE
+}
+
+do_wcn_test_exit(){
+    echo "good bye!"
+    	echo $WCNEXIT >> $WCNINFILE
+	sleep 1
+}
+
+
+# Main handler
+case "$1" in
+init)
+    do_wcn_test_init
+    ;;
+
+deinit)
+    do_wcn_test_exit
+    ;;
+        
+fm)
+	do_fm_cmd_dispatcher
+	;;
+
+gps)
+	do_gps_cmd_dispatcher
+	;;
+
+bt)
+	do_bt_cmd_dispatcher
+	;;
+
+wifi)
+	do_wifi_cmd_dispatcher
+	;;
+	
+*)
+	echo "usage:[$0 <fm, gps, bt, wifi>  <cmd> <para>]"
+	exit -1
+	;;
+
+esac
+
+exit 1

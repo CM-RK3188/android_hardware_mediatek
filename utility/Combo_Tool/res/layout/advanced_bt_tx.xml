@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:background="@drawable/bg">
+	
+<ScrollView 
+    android:layout_width="fill_parent"
+    android:id="@+id/advance_wifi_table"
+    android:layout_height="wrap_content" >
+	<LinearLayout 
+		android:id="@+id/advance_bt_tx"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:orientation="vertical">
+
+		<TableLayout 
+			android:id="@+id/advance_bt_table_row_tx"
+			android:layout_width="fill_parent" 
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="3dip" 
+			android:stretchColumns="1">
+
+			<TableRow 
+				android:id="@+id/advance_bt_table_row_tx"
+				android:layout_width="fill_parent" 
+				android:paddingTop="5dip"
+				android:layout_height="wrap_content">
+				<TextView 
+					android:id="@+id/BT_Tx_Pattern_Text"
+					android:text="@string/bt_tx_pattern_text"					
+					android:layout_width="fill_parent" 
+					android:layout_height="wrap_content"
+					android:paddingTop="12dip"
+					android:textStyle="bold">
+				</TextView>
+				<Spinner 
+					android:id="@+id/BT_Tx_Pattern_Spinner" 
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content" 
+					android:textSize="18sp" 
+					android:singleLine="true">
+				</Spinner>
+			</TableRow>
+			
+			<TableRow 
+				android:id="@+id/advance_bt_table_row_tx"
+				android:layout_width="fill_parent" 
+				android:paddingTop="5dip"
+				android:layout_height="wrap_content">
+				<TextView 
+					android:id="@+id/BT_Tx_Channel_Text"
+					android:text="@string/bt_channel_text"					
+					android:layout_width="fill_parent" 
+					android:layout_height="wrap_content"
+					android:paddingTop="12dip"
+					android:textStyle="bold">
+				</TextView>
+				<Spinner 
+					android:id="@+id/BT_Tx_Channel_Spinner" 
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content" 
+					android:textSize="18sp" 
+					android:singleLine="true">
+				</Spinner>
+			</TableRow>
+			
+			<TableRow 
+				android:id="@+id/advance_bt_table_row_tx"
+				android:layout_width="fill_parent" 
+				android:paddingTop="5dip"
+				android:layout_height="wrap_content">
+				<TextView 
+					android:id="@+id/BT_Tx_Frequency_Text"
+					android:text="@string/bt_tx_frequency_text"					
+					android:layout_width="fill_parent" 
+					android:layout_height="wrap_content"
+					android:paddingTop="12dip"
+					android:textStyle="bold">
+				</TextView>
+				<EditText
+					android:id="@+id/BT_Tx_Frequency_Edit" 
+					android:text="@string/bt_tx_frequency_edit"
+					android:layout_width="fill_parent"					
+					android:layout_height="wrap_content" 
+					android:singleLine="true">
+				</EditText>
+			</TableRow>
+			
+			<TableRow 
+				android:id="@+id/advance_bt_table_row_tx"
+				android:layout_width="fill_parent" 
+				android:paddingTop="5dip"
+				android:layout_height="wrap_content">
+				<TextView 
+					android:id="@+id/BT_Tx_Packet_Type_Text"
+					android:text="@string/bt_packet_type_text"					
+					android:layout_width="fill_parent" 
+					android:layout_height="wrap_content"
+					android:paddingTop="12dip"
+					android:textStyle="bold">
+				</TextView>
+				<Spinner 
+					android:id="@+id/BT_Tx_Packet_Type_Spinner" 
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content" 
+					android:textSize="18sp" 
+					android:singleLine="true">
+				</Spinner>
+			</TableRow>
+			
+			<TableRow 
+				android:id="@+id/advance_bt_table_row_tx"
+				android:layout_width="fill_parent" 
+				android:paddingTop="5dip"
+				android:layout_height="wrap_content">
+				<TextView 
+					android:id="@+id/BT_Tx_Packet_Length_Text"
+					android:text="@string/bt_packet_length_text"					
+					android:layout_width="fill_parent" 
+					android:layout_height="wrap_content"
+					android:paddingTop="12dip"
+					android:textStyle="bold">
+				</TextView>
+				<EditText
+					android:id="@+id/BT_Tx_Packet_Length_Edit" 
+					android:text="@string/bt_packet_length_edit"
+					android:layout_width="fill_parent"					
+					android:layout_height="wrap_content" 
+					android:singleLine="true">
+				</EditText>
+			</TableRow>			
+	
+			
+		</TableLayout>
+		
+		<TableLayout
+			android:id="@+id/TableLayout_button_bt_tx"
+			android:layout_width="fill_parent" 
+			android:paddingTop="20dip"
+			android:layout_height="wrap_content">
+					
+			<TableRow 
+				android:id="@+id/TableLayout_button_bt_tx"
+				android:layout_width="fill_parent" 
+				android:layout_height="wrap_content">
+		
+				<Button
+               	 	android:id="@+id/BT_Tx_Start"
+               	 	android:layout_width="fill_parent"
+                	android:layout_height="wrap_content"
+                	android:layout_weight="1"
+                	android:text="@string/bt_go" >
+            	</Button>
+            	<Button
+               	 	android:id="@+id/BT_Tx_Stop"
+               	 	android:layout_width="fill_parent"
+                	android:layout_height="wrap_content"
+                	android:layout_weight="1"
+                	android:text="@string/bt_stop" >
+            	</Button>
+
+			</TableRow>	
+		</TableLayout>	
+	</LinearLayout>
+</ScrollView>
+</FrameLayout>
