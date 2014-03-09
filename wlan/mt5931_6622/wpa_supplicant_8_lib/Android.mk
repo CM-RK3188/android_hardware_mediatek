@@ -21,8 +21,8 @@ ifneq ($(BOARD_WPA_SUPPLICANT_DRIVER),)
   CONFIG_DRIVER_$(BOARD_WPA_SUPPLICANT_DRIVER) := y
 endif
 
-WPA_SUPPL_DIR = external/wpa_supplicant_8
-WPA_SRC_FILE :=
+WPA_SUPPL_DIR = device/rockchip/rk3188/external/wpa_supplicant_8
+WPA_SRC_FILE := 
 
 include $(WPA_SUPPL_DIR)/wpa_supplicant/android.config
 
